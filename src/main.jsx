@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <h1>hello world!</h1>
+    <Navbar />
+    <Hero />
   </React.StrictMode>
 )
