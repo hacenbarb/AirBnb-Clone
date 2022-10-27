@@ -4,7 +4,7 @@
   margin: 0;
 }
 body {
-  min-height: 1000px;
+  min-height: 3000px;
 }
 h1,h2,h3 {
   text-transform: capitalize;
@@ -49,4 +49,62 @@ h1 {
 }
 .hero__content__text {
   margin-top: 1rem;
+}
+
+.cards {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  overflow-y: auto;
+}
+
+.card:not(:first-child),.card:not(:last-child)  {
+  padding-inline: .5rem;
+}
+.card__media {
+  position: relative;
+  min-width: 200px;
+  min-height: 260px;
+}
+.card__media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+}
+
+.card__media .status {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  padding: .25rem .5rem;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.card__content {
+  margin-top: .5rem;
+}
+.card__content .card__content__rating > span {
+  padding-right: .5rem;
+}
+.card__content .card__content__rating .rating-count, .card__content .card__content__rating .rating-location {
+  color: grey;
+}
+.card__content .card__content__rating .rating-count::before {
+  content: '(';
+}
+.card__content .card__content__rating .rating-count::after {
+  content: ')';
+}
+.card__content .card__content__rating .rating-location::before {
+  content: "• ";
+}
+.card__content .title, .card__content .price > span {
+  font-weight: 500;
 }
